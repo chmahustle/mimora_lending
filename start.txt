@@ -1,0 +1,3 @@
+cd /home/diana/progects/mimora_lending && python3 -m http.server 8765
+
+# Открой в браузере: http://localhost:8765/
