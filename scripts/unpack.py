@@ -250,7 +250,7 @@ def main():
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>mimora — Synthetic Audience Intelligence</title>
+  <title>mimora - Synthetic Audience Intelligence</title>
   <link rel="stylesheet" href="css/fonts.css">
   <link rel="stylesheet" href="css/main.css">
 </head>

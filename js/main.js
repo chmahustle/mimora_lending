@@ -1,3 +1,12 @@
+/* =========== ACTIVE NAV LINK =========== */
+(function(){
+  const path = window.location.pathname.split('/').pop() || 'index.html';
+  document.querySelectorAll('.nav-links a').forEach(a => {
+    const href = a.getAttribute('href').split('/').pop().split('#')[0] || 'index.html';
+    if (href === path) a.classList.add('nav-active');
+  });
+})();
+
 /* =========== I18N =========== */
 const STORAGE_KEY = 'mimora-lang';
 function setLang(lang){
@@ -66,6 +75,7 @@ setLang(localStorage.getItem(STORAGE_KEY) || 'ru');
   const section = document.querySelector('.how-it-works');
   if (!section) return;
   const totalSteps = 4;
+  const scrollHint = document.getElementById('howScrollHint');
   ScrollTrigger.create({
     trigger: section,
     start: 'top top',
@@ -74,6 +84,9 @@ setLang(localStorage.getItem(STORAGE_KEY) || 'ru');
     onUpdate: (self) => {
       const progress = self.progress;
       const activeStep = Math.min(totalSteps, Math.floor(progress * totalSteps) + 1);
+
+      // Hide scroll hint once user starts scrolling
+      if (scrollHint && progress > 0.02) scrollHint.classList.add('hidden');
 
       // Left text block
       section.querySelectorAll('.how-step').forEach(el => {
@@ -173,7 +186,7 @@ function waitlistSubmit(form){
   setTimeout(() => form.reset(), 1200);
 }
 
-/* =========== PRICING TITLE — EMERGE FROM UNDER MANIFESTO =========== */
+/* =========== PRICING TITLE - EMERGE FROM UNDER MANIFESTO =========== */
 (function(){
   const title     = document.querySelector('.price-head-title');
   const manifesto = document.querySelector('#manifesto-block');
@@ -188,17 +201,17 @@ function waitlistSubmit(form){
   }
 
   // Start: title is hidden above the clip area (behind the green block)
-  gsap.set(title, { y: '-110%' });
+  gsap.set(title, { y: '-110%', opacity: 0 });
 
-  // Scrubbed reveal: moves 1:1 with scroll so user literally sees it emerge
   gsap.to(title, {
     y: '0%',
-    ease: 'none',                  // linear = follows finger exactly
+    opacity: 1,
+    ease: 'none',
     scrollTrigger: {
       trigger: manifesto,
-      start: 'bottom 95%',         // begin just as manifesto bottom enters lower viewport
-      end:   'bottom 5%',          // finish when manifesto is nearly at top
-      scrub: 1,                    // smooth 1s lag — feels physical, not robotic
+      start: 'bottom 80%',
+      end:   'bottom 20%',
+      scrub: 0.4,
     }
   });
 })();
@@ -250,7 +263,7 @@ function waitlistSubmit(form){
   const foot = document.querySelector('.foot');
   const wm = document.querySelector('.foot-watermark');
   if (!foot || !wm) return;
-  // Activate watermark whenever cursor is anywhere over the footer —
+  // Activate watermark whenever cursor is anywhere over the footer -
   // makes the hit area generous and prevents flicker when crossing letters.
   foot.addEventListener('mouseenter', () => wm.classList.add('is-active'));
   foot.addEventListener('mouseleave', () => wm.classList.remove('is-active'));
@@ -272,6 +285,16 @@ function waitlistSubmit(form){
     layoutTargets();
   }
 
+  // Palette of highlight tints
+  const TINTS = [
+    [192, 204, 114],   // classic lime
+    [214, 224, 140],   // bright lime
+    [255, 252, 210],   // warm cream
+    [168, 196,  90],   // deep green-lime
+    [240, 240, 180],   // light gold
+    [200, 220, 130],   // mid lime
+  ];
+
   const N = 1000;
   const dots = [];
   for (let i=0;i<N;i++){
@@ -279,10 +302,18 @@ function waitlistSubmit(form){
       x: Math.random()*800, y: Math.random()*500,
       tx: 0, ty: 0,
       ox: 0, oy: 0,
-      r: 1.2 + Math.random()*1.3,
-      a: 0.35 + Math.random()*0.4,
-      lime: Math.random() < 0.18,
+      r: 0.7 + Math.random()*2.8,          // wider size range
+      a: 0.25 + Math.random()*0.45,
+      lime: Math.random() < 0.15,
       phase: Math.random()*Math.PI*2,
+      // highlight lifecycle
+      hlAlpha:  0,                           // current highlight opacity 0-1
+      hlTarget: 0,                           // target (1=active, 0=off)
+      hlColor:  TINTS[0],
+      hlSize:   1,                           // extra radius when lit
+      hlLife:   0,                           // ms alive
+      hlDur:    0,                           // total duration
+      activateAt: Math.random() * 3000,     // stagger initial activation
     });
   }
 
@@ -296,7 +327,7 @@ function waitlistSubmit(form){
     const D = Math.min(W, H, 760);
     const R = D * 0.42;
 
-    // Phase 0: crowd (irregular grid) — fills the full hero, edge-to-edge
+    // Phase 0: crowd (irregular grid) - fills the full hero, edge-to-edge
     const cols = 22;
     const rows = Math.ceil(N/cols);
     for (let i=0;i<N;i++){
@@ -308,7 +339,7 @@ function waitlistSubmit(form){
       targetsByPhase[0].push({x,y});
     }
 
-    // Phase 1: globe (sphere) — 3D points, rotated each frame, fixed size
+    // Phase 1: globe (sphere) - 3D points, rotated each frame, fixed size
     for (let i=0;i<N;i++){
       const phi = Math.acos(1 - 2*(i+0.5)/N);
       const theta = Math.PI * (1 + Math.sqrt(5)) * i;
@@ -318,7 +349,7 @@ function waitlistSubmit(form){
       targetsByPhase[1].push({x3d: sx, y3d: sy, z3d: sz, R, cx, cy});
     }
 
-    // Phase 2: simplified world-map silhouette — fills canvas, preserves aspect
+    // Phase 2: simplified world-map silhouette - fills canvas, preserves aspect
     const map = WORLD_POINTS;
     const mapBounds = {minx: -170, maxx: 180, miny: -58, maxy: 82};
     const mapW = mapBounds.maxx - mapBounds.minx;
@@ -368,8 +399,24 @@ function waitlistSubmit(form){
   // Phase cycle: 0,1,2 with 4s hold + 2s morph
   const PHASE_HOLD = 4000, PHASE_MORPH = 1800;
   let t0 = performance.now();
-  let activeTimer = 0;
-  const activeDots = new Set();
+  let prevNow = 0;
+
+  // Schedule next wave of highlights
+  let nextWave = 0;
+  function scheduleWave(now){
+    const count = 4 + Math.floor(Math.random() * 7); // 4-10 dots per wave
+    for (let j = 0; j < count; j++){
+      const idx = Math.floor(Math.random() * N);
+      const d = dots[idx];
+      if (d.hlAlpha > 0.1) continue; // skip already lit dots
+      d.activateAt  = now + j * (60 + Math.random() * 140); // stagger 60-200ms apart
+      d.hlColor     = TINTS[Math.floor(Math.random() * TINTS.length)];
+      d.hlSize      = 0.8 + Math.random() * 4.5;            // size 0.8→5.3 extra radius
+      d.hlDur       = 900 + Math.random() * 1400;           // lifetime 0.9-2.3s
+      d.hlLife      = -1;                                    // -1 = waiting to activate
+    }
+    nextWave = now + 260 + Math.random() * 200;
+  }
 
   function getPhaseState(now){
     const cycle = PHASE_HOLD + PHASE_MORPH;
@@ -389,19 +436,28 @@ function waitlistSubmit(form){
   function tick(now){
     if (!W || !H) { requestAnimationFrame(tick); return; }
     const {from, to, mix} = getPhaseState(now);
+    const dt = Math.min(50, prevNow ? now - prevNow : 16);
+    prevNow = now;
 
-    // Update activation
-    if (now - activeTimer > 220){
-      activeTimer = now;
-      const k = 4;
-      for (let j=0;j<k;j++){
-        activeDots.add(Math.floor(Math.random()*N));
+    // Wave scheduler
+    if (now >= nextWave) scheduleWave(now);
+
+    // Update each dot's highlight lifecycle
+    for (let i = 0; i < N; i++){
+      const d = dots[i];
+      if (d.hlLife === -1){
+        // waiting
+        if (now >= d.activateAt) d.hlLife = 0;
+      } else if (d.hlLife >= 0 && d.hlDur > 0){
+        d.hlLife += dt;
+        const p = d.hlLife / d.hlDur;
+        if (p < 0.18)       d.hlTarget = p / 0.18;             // fade in
+        else if (p < 0.65)  d.hlTarget = 1;                    // hold
+        else if (p < 1)     d.hlTarget = 1 - (p - 0.65)/0.35; // fade out
+        else { d.hlTarget = 0; d.hlLife = 0; d.hlDur = 0; }   // reset
       }
-      // remove some
-      if (activeDots.size > 22){
-        const arr = [...activeDots];
-        for (let j=0;j<6;j++) activeDots.delete(arr[Math.floor(Math.random()*arr.length)]);
-      }
+      // smooth alpha interpolation
+      d.hlAlpha += (d.hlTarget - d.hlAlpha) * 0.07;
     }
 
     ctx.clearRect(0,0,W,H);
@@ -416,7 +472,7 @@ function waitlistSubmit(form){
     const phaseNames = ['CROWD · PHASE 01', 'GLOBE · PHASE 02', 'WORLD MAP · PHASE 03'];
     if (label) label.textContent = '[ ' + phaseNames[mix < 0.5 ? from : to] + ' ]';
 
-    // Globe rotation — Y-axis spin, continuous
+    // Globe rotation - Y-axis spin, continuous
     const cx = W/2, cy = H/2;
     const rotY = (now * 0.0006);
     const cosY = Math.cos(rotY), sinY = Math.sin(rotY);
@@ -461,21 +517,29 @@ function waitlistSubmit(form){
       d.x += (tx + wx - d.x) * ease;
       d.y += (ty + wy - d.y) * ease;
 
-      const isActive = activeDots.has(i) || d.lime;
+      const hl = d.hlAlpha;
+      const isLit = hl > 0.01 || d.lime;
+      const dotR = d.r + (isLit ? d.hlSize * hl : 0);
+
       ctx.beginPath();
-      ctx.arc(d.x, d.y, d.r + (isActive ? 0.6 : 0), 0, Math.PI*2);
-      if (isActive){
-        ctx.fillStyle = 'rgba(192,204,114,' + ((0.7 + Math.sin(d.phase*2)*0.2) * depthAlpha) + ')';
+      ctx.arc(d.x, d.y, dotR, 0, Math.PI*2);
+      if (isLit && hl > 0.01){
+        const [cr,cg,cb] = d.hlColor;
+        const a = (0.55 + 0.45 * hl) * depthAlpha;
+        ctx.fillStyle = `rgba(${cr},${cg},${cb},${a.toFixed(3)})`;
+      } else if (d.lime){
+        ctx.fillStyle = 'rgba(192,204,114,' + ((0.4 + Math.sin(d.phase*2)*0.15) * depthAlpha) + ')';
       } else {
-        ctx.fillStyle = 'rgba(255,255,255,' + (d.a*0.55 * depthAlpha) + ')';
+        ctx.fillStyle = 'rgba(255,255,255,' + (d.a * 0.5 * depthAlpha) + ')';
       }
       ctx.fill();
 
-      // active glow ring (no heavy shadow)
-      if (activeDots.has(i)){
+      // soft glow ring for highlighted dots
+      if (hl > 0.05){
+        const [cr,cg,cb] = d.hlColor;
         ctx.beginPath();
-        ctx.arc(d.x, d.y, d.r + 3.5, 0, Math.PI*2);
-        ctx.strokeStyle = 'rgba(192,204,114,' + (0.25 * depthAlpha) + ')';
+        ctx.arc(d.x, d.y, dotR + 2.5 + d.hlSize * 0.5, 0, Math.PI*2);
+        ctx.strokeStyle = `rgba(${cr},${cg},${cb},${(0.18 * hl * depthAlpha).toFixed(3)})`;
         ctx.lineWidth = 1;
         ctx.stroke();
       }
