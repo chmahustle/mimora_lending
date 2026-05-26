@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,417 +8,498 @@
   <link rel="stylesheet" href="css/fonts.css">
   <link rel="stylesheet" href="css/main.css">
 </head>
+
 <body>
-<!-- ============ TOP BANNER ============ -->
-<div class="banner">
-  <a href="#waitlist">
-    <span data-en="FREE AI AUDIT OF YOUR FAILED CREATIVE → JOIN THE WAITLIST" data-ru="БЕСПЛАТНЫЙ AI-АУДИТ ТВОЕГО ПРОВАЛЬНОГО КРЕАТИВА → ВОЙТИ В СПИСОК">БЕСПЛАТНЫЙ AI-АУДИТ ТВОЕГО ПРОВАЛЬНОГО КРЕАТИВА → ВОЙТИ В СПИСОК</span>
-  </a>
-</div>
-
-<!-- ============ NAV ============ -->
-<div class="nav-wrap">
-  <nav class="nav" id="nav">
-    <a href="index.html" class="nav-logo">mimora</a>
-    <div class="nav-links">
-      <a href="index.html" data-en="HOME" data-ru="ГЛАВНАЯ">ГЛАВНАЯ</a>
-      <a href="about.html" data-en="TEAM" data-ru="КОМАНДА">КОМАНДА</a>
-      <a href="/manifesto.html" data-en="MANIFESTO" data-ru="МАНИФЕСТ">МАНИФЕСТ</a>
-    </div>
-    <div class="nav-right">
-      <div class="lang">
-        <button data-lang="en">EN</button>
-        <span class="sep">|</span>
-        <button data-lang="ru" class="active">RU</button>
-      </div>
-      <a href="index.html#waitlist" class="btn-cta" data-en="Join Waitlist" data-ru="Войти в список">Войти в список</a>
-    </div>
-    <button class="hamburger" id="hamburger" aria-label="Меню">
-      <span></span><span></span><span></span>
-    </button>
-  </nav>
-</div>
-
-<!-- ============ MOBILE MENU ============ -->
-<div class="mobile-menu" id="mobileMenu">
-  <div class="mobile-menu-header">
-    <span class="mobile-menu-logo">mimora</span>
-    <button class="mobile-menu-close" id="mobileMenuClose" aria-label="Закрыть">
-      <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
-        <line x1="1" y1="1" x2="11" y2="11"/><line x1="11" y1="1" x2="1" y2="11"/>
-      </svg>
-    </button>
+  <!-- ============ TOP BANNER ============ -->
+  <div class="banner">
+    <a href="#waitlist">
+      <span data-en="FREE AI AUDIT OF YOUR FAILED CREATIVE → JOIN THE WAITLIST"
+        data-ru="БЕСПЛАТНЫЙ AI-АУДИТ ТВОЕГО ПРОВАЛЬНОГО КРЕАТИВА → ВОЙТИ В СПИСОК">БЕСПЛАТНЫЙ AI-АУДИТ ТВОЕГО
+        ПРОВАЛЬНОГО КРЕАТИВА → ВОЙТИ В СПИСОК</span>
+    </a>
   </div>
-  <div class="mobile-menu-links">
-    <a href="index.html" data-en="Home" data-ru="Главная">Главная</a>
-    <a href="about.html" data-en="Team" data-ru="Команда">Команда</a>
-    <a href="/manifesto.html" data-en="Manifesto" data-ru="Манифест">Манифест</a>
-  </div>
-  <div class="mobile-menu-foot">
-    <div class="lang">
-      <button data-lang="en">EN</button>
-      <span class="sep">|</span>
-      <button data-lang="ru" class="active">RU</button>
-    </div>
-    <a href="index.html#waitlist" class="btn-cta mobile-menu-cta" data-en="Join Waitlist" data-ru="Войти в список">Войти в список</a>
-  </div>
-</div>
 
-<!-- ============ SECTION 1 - HERO ============ -->
-<section class="hero sec-dark" data-bg="dark" id="hero">
-  <div class="hero-canvas-wrap">
-    <canvas class="hero-canvas" id="heroCanvas"></canvas>
-  </div>
-  <div class="container">
-    <div class="hero-inner reveal">
-      <div class="hero-split">
-        <div class="hero-split-left">
-          <h1 class="h-hero hero-h">
-            <span class="l1" data-en="Test before" data-ru="Тестируй">Тестируй</span>
-            <span class="l2" data-en="launch." data-ru="до запуска.">до запуска.</span>
-          </h1>
-        </div>
-        <div class="hero-split-divider" aria-hidden="true"></div>
-        <div class="hero-split-right">
-          <span class="label" data-en="SYNTHETIC AUDIENCE INTELLIGENCE" data-ru="SYNTHETIC AUDIENCE INTELLIGENCE">SYNTHETIC AUDIENCE INTELLIGENCE</span>
-          <p class="hero-sub" data-en="Run your creative, offer, or landing page through an AI audience. Find out why they won't buy - and get the version they will." data-ru="Прогони креатив, оффер или лендинг через AI-аудиторию. Узнай почему не купят - и получи версию которая купит.">Прогони креатив, оффер или лендинг через AI-аудиторию. Узнай почему не купят - и получи версию которая купит.</p>
-          <div class="hero-ctas">
-            <a href="#waitlist" class="btn-primary"><span data-en="Join waitlist" data-ru="Войти в список">Войти в список</span> →</a>
-            <a href="#solution" class="btn-ghost"><span data-en="How it works" data-ru="Как это работает">Как это работает</span> →</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ SECTION 2 - PROBLEM ============ -->
-<section class="sec-white" data-bg="light" id="problem">
-  <div class="grid-bg"></div>
-  <div class="container problem-grid">
-    <div class="problem-left reveal">
-      <h2 class="h-sec" data-en="You learn the truth too late." data-ru="Ты узнаёшь правду слишком поздно.">Ты узнаёшь правду слишком поздно.</h2>
-    </div>
-    <div class="problem-items">
-      <div class="prob-item reveal">
-        <div>
-          <div class="prob-title" data-en="Money already spent" data-ru="Деньги уже потрачены">Деньги уже потрачены</div>
-          <p class="prob-body" data-en="The average failed launch costs $500–2000. Only after do you realize the offer didn't work." data-ru="Средний провальный запуск стоит $500–2000. И только после него ты понимаешь что оффер не зашёл.">Средний провальный запуск стоит $500-2000. И только после него ты понимаешь что оффер не зашёл.</p>
-        </div>
-      </div>
-      <div class="prob-item reveal" style="transition-delay:.08s">
-        <div>
-          <div class="prob-title" data-en="Numbers without answers" data-ru="Цифры есть - ответов нет">Цифры есть - ответов нет</div>
-          <p class="prob-body" data-en="CTR and clicks show what didn't work. Not why they didn't buy." data-ru="CTR и клики показывают что не работает. Но не объясняют почему не купили.">CTR и клики показывают что не работает. Но не объясняют почему не купили.</p>
-        </div>
-      </div>
-      <div class="prob-item reveal" style="transition-delay:.16s">
-        <div>
-          <div class="prob-title" data-en="All tools look backward" data-ru="Все инструменты смотрят назад">Все инструменты смотрят назад</div>
-          <p class="prob-body" data-en="A/B tests are slow and costly. One AI is flat. Spy tools show others' experience." data-ru="A/B тест - долго и дорого. Один AI - плоско и без контекста. Spy tools - чужой опыт, не твой.">A/B тест - долго и дорого. Один AI - плоско и без контекста. Spy tools - чужой опыт, не твой.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ SECTION 3 - SOLUTION ============ -->
-<section class="how-it-works sec-dark" data-bg="dark" id="solution">
-  <div class="how-sticky">
-    <div class="how-scroll-hint" id="howScrollHint">
-      <span data-en="scroll" data-ru="скролл">скролл</span>
-      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><line x1="8" y1="2" x2="8" y2="14"/><polyline points="4,10 8,14 12,10"/></svg>
-    </div>
-    <div class="how-grid">
-
-      <!-- LEFT: TEXT -->
-      <div class="how-text">
-        <div class="how-step active" data-step="1">
-          <span class="how-label" data-en="01 / Upload" data-ru="01 / Загрузка">01 / Загрузка</span>
-          <h3 class="how-title" data-en="Upload your creative, offer, or landing page" data-ru="Загружаешь креатив, оффер или лендинг">Загружаешь креатив, оффер или лендинг</h3>
-          <p class="how-body" data-en="Image, text, or a link to your site - whatever you've got. No integrations. The test starts in under a minute." data-ru="Картинка, текст, ссылка на сайт - что угодно. Никаких интеграций. Тест запускается за минуту.">Картинка, текст, ссылка на сайт - что угодно. Никаких интеграций. Тест запускается за минуту.</p>
-        </div>
-        <div class="how-step" data-step="2">
-          <span class="how-label" data-en="02 / Audience" data-ru="02 / Аудитория">02 / Аудитория</span>
-          <h3 class="how-title" data-en="Pick your audience" data-ru="Выбираешь, кому показать">Выбираешь, кому показать</h3>
-          <p class="how-body" data-en="Geo, gender, age, interests, income. The algorithm assembles an AI audience from people who could actually buy." data-ru="Гео, пол, возраст, интересы, доход. Алгоритм соберёт AI-аудиторию из тех, кому твой оффер реально мог бы зайти.">Гео, пол, возраст, интересы, доход. Алгоритм соберёт AI-аудиторию из тех, кому твой оффер реально мог бы зайти.</p>
-        </div>
-        <div class="how-step" data-step="3">
-          <span class="how-label" data-en="03 / Analytics" data-ru="03 / Аналитика">03 / Аналитика</span>
-          <h3 class="how-title" data-en="See why they won't buy" data-ru="Видишь почему не купят">Видишь почему не купят</h3>
-          <p class="how-body" data-en="P2B Score, objection map, reasons for rejection. Agents literally comment on your creative - like a live focus group in the comments." data-ru="P2B Score, карта возражений, причины отказа. Агенты буквально комментируют твой креатив - как живая фокус-группа в комментах.">P2B Score, карта возражений, причины отказа. Агенты буквально комментируют твой креатив - как живая фокус-группа в комментах.</p>
-        </div>
-        <div class="how-step" data-step="4">
-          <span class="how-label" data-en="04 / Improvement" data-ru="04 / Улучшение">04 / Улучшение</span>
-          <h3 class="how-title" data-en="Get the version they'll buy" data-ru="Получаешь версию которая купят">Получаешь версию которая купят</h3>
-          <p class="how-body" data-en="The platform generates a fixed version addressing the found objections. Re-run the test. Only then - go live." data-ru="Платформа сразу генерирует исправленный креатив с учётом найденных возражений. Прогоняешь повторно. И только потом - в трафик.">Платформа сразу генерирует исправленный креатив с учётом найденных возражений. Прогоняешь повторно. И только потом - в трафик.</p>
-        </div>
-      </div>
-
-      <!-- RIGHT: LAYERED SCENE -->
-      <div class="how-scene">
-
-        <!-- STEP 1: Dropzone -->
-        <div class="scene-group active" data-step="1">
-          <div class="card card-main card-dropzone">
-            <div class="card-header" data-en="UPLOAD" data-ru="UPLOAD">UPLOAD</div>
-            <div class="card-body">
-              <svg class="upload-icon" width="36" height="36" stroke="#C0CC72" stroke-width="1.5" fill="none" viewBox="0 0 24 24"><path d="M12 4v12m0-12l-4 4m4-4l4 4M4 20h16" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-              <div class="dropzone-text" data-en="Drop your creative here" data-ru="Перетащи креатив сюда">Перетащи креатив сюда</div>
-              <div class="dropzone-progress">
-                <span>creative_v3.jpg · 2.4 MB</span>
-                <span class="check">✓</span>
-              </div>
-            </div>
-          </div>
-          <div class="card card-aux card-tag" style="--x:-220px; --y:-150px; --rot:-3deg;">PNG · JPG · MP4 · LINK</div>
-          <div class="card card-aux card-meta" style="--x:230px; --y:-180px; --rot:2deg;">1280×720 · 2.4 MB</div>
-          <div class="card card-aux card-timer" style="--x:200px; --y:170px; --rot:-2deg;">
-            <span class="dot-live"></span>
-            <span data-en="Analysis running · 00:23" data-ru="Анализ запущен · 00:23">Анализ запущен · 00:23</span>
-          </div>
-        </div>
-
-        <!-- STEP 2: Audience -->
-        <div class="scene-group" data-step="2">
-          <div class="card card-main card-screenshot">
-            <div class="card-header" data-en="AUDIENCE MAP" data-ru="AUDIENCE MAP">AUDIENCE MAP</div>
-            <div class="card-body card-img">
-              <img src="assets/images/audience-map.jpg" alt="Audience map">
-            </div>
-          </div>
-          <div class="card card-aux card-filter" style="--x:-240px; --y:-130px; --rot:-2deg;" data-en="Geo: Kazakhstan + CIS" data-ru="Гео: Казахстан + СНГ">Гео: Казахстан + СНГ</div>
-          <div class="card card-aux card-filter" style="--x:-260px; --y:30px; --rot:3deg;" data-en="Age: 25–45" data-ru="Возраст: 25–45">Возраст: 25–45</div>
-          <div class="card card-aux card-filter" style="--x:240px; --y:-150px; --rot:2deg;" data-en="Interests: marketing, business" data-ru="Интересы: маркетинг, бизнес">Интересы: маркетинг, бизнес</div>
-          <div class="card card-aux card-metric" style="--x:220px; --y:150px; --rot:-3deg;">
-            <strong>412</strong>
-            <span data-en="relevant agents" data-ru="релевантных агентов">релевантных агентов</span>
-          </div>
-        </div>
-
-        <!-- STEP 3: Reactions -->
-        <div class="scene-group" data-step="3">
-          <div class="card card-main card-screenshot">
-            <div class="card-header" data-en="REACTIONS" data-ru="REACTIONS">REACTIONS</div>
-            <div class="card-body card-img">
-              <img src="assets/images/agent-reactions.jpg" alt="Agent reactions">
-            </div>
-          </div>
-          <div class="card card-aux card-score" style="--x:-250px; --y:-130px; --rot:-2deg;">
-            <span class="score-label">P2B SCORE</span>
-            <strong>23%</strong>
-          </div>
-          <div class="card card-aux card-quote" style="--x:-220px; --y:100px; --rot:2deg;">
-            <span class="quote-mark">"</span><span data-en="Too expensive for the guarantees" data-ru="Слишком дорого для гарантий">Слишком дорого для гарантий</span>
-          </div>
-          <div class="card card-aux card-quote" style="--x:240px; --y:-160px; --rot:3deg;">
-            <span class="quote-mark">"</span><span data-en="Not clear what I'm getting" data-ru="Не понятно что я получу">Не понятно что я получу</span>
-          </div>
-          <div class="card card-aux card-meta" style="--x:220px; --y:160px; --rot:-2deg;" data-en="312 agents · 78 objections" data-ru="312 агентов · 78 возражений">312 агентов · 78 возражений</div>
-        </div>
-
-        <!-- STEP 4: Regenerated -->
-        <div class="scene-group" data-step="4">
-          <div class="card card-main card-screenshot">
-            <div class="card-header" data-en="REGENERATED" data-ru="REGENERATED">REGENERATED</div>
-            <div class="card-body card-img">
-              <img src="assets/images/regenerated-creative.jpg" alt="Regenerated creative">
-            </div>
-          </div>
-          <div class="card card-aux card-growth" style="--x:-250px; --y:-140px; --rot:-3deg;">
-            <span class="growth-label">P2B SCORE</span>
-            <span class="growth-row"><strong>23%</strong> <span class="arrow">→</span> <strong class="hi">67%</strong></span>
-          </div>
-          <div class="card card-aux card-ba" style="--x:-230px; --y:100px; --rot:2deg;">
-            <span class="ba-before" data-en="&quot;Best AI tool&quot;" data-ru="&quot;Лучший AI инструмент&quot;">"Лучший AI инструмент"</span>
-            <span class="ba-arrow">↓</span>
-            <span class="ba-after" data-en="&quot;Save $500 in 3 minutes&quot;" data-ru="&quot;Сэкономь $500 за 3 минуты&quot;">"Сэкономь $500 за 3 минуты"</span>
-          </div>
-          <div class="card card-aux card-version" style="--x:220px; --y:150px; --rot:-2deg;">
-            <span class="dot-live"></span>
-            <span data-en="Version 2 ready · re-test ↻" data-ru="Версия 2 готова · повторный тест ↻">Версия 2 готова · повторный тест ↻</span>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- PROGRESS -->
-      <div class="how-progress">
-        <span class="dot active"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ============ SECTION 4 - TECHNOLOGY ============ -->
-<section class="sec-gray" data-bg="light" id="tech">
-  <div class="grid-bg"></div>
-  <div class="container">
-    <div class="tech-head reveal">
-      <h2 class="h-sec"><span data-en="One AI gives opinions. mimora gives behavior." data-ru="Один AI даёт мнение. mimora - поведение.">Один AI даёт мнение. mimora - поведение.</span></h2>
-    </div>
-
-    <div class="tech-row">
-      <div class="tech-block reveal">
-        <h3 class="tech-block-t" data-en="Each agent has a real backstory" data-ru="У каждого агента - своя биография">У каждого агента - своя биография</h3>
-        <p class="tech-block-b" data-en="Not identical AI clones. Each agent has their own demographics, history, attitude toward money, and biases. Their reactions to your creative differ - like real people." data-ru="Не одинаковые AI-клоны. У каждого агента своя демография, опыт, отношение к деньгам и предубеждения. Поэтому реакции на твой креатив разные - как у настоящих людей.">Не одинаковые AI-клоны. У каждого агента своя демография, опыт, отношение к деньгам и предубеждения. Поэтому реакции на твой креатив разные - как у настоящих людей.</p>
-      </div>
-      <div class="tech-block reveal" style="transition-delay:.1s">
-        <h3 class="tech-block-t" data-en="Agents see each other" data-ru="Агенты видят друг друга">Агенты видят друг друга</h3>
-        <p class="tech-block-b" data-en="In a real feed, one like changes the mind of ten others. Our agents also see each other's reactions - they behave like a crowd, not isolated respondents." data-ru="В реальной ленте один лайк меняет мнение десяти. Наши агенты тоже видят, кто что написал - и реагируют как толпа, а не как изолированные респонденты.">В реальной ленте один лайк меняет мнение десяти. Наши агенты тоже видят, кто что написал - и реагируют как толпа, а не как изолированные респонденты.</p>
-      </div>
-      <div class="tech-block reveal" style="transition-delay:.2s">
-        <h3 class="tech-block-t" data-en="Only relevant agents pass the filter" data-ru="К тесту допускаются только релевантные">К тесту допускаются только релевантные</h3>
-        <p class="tech-block-b" data-en="The algorithm filters out agents who wouldn't care about your offer in the first place - just like social platforms don't show ads to everyone. You get reactions from those who could actually buy." data-ru="Алгоритм отсеивает тех, кому твой оффер изначально неинтересен. Так же, как соцсети не показывают рекламу всем подряд. Ты получаешь оценку от тех, кто действительно мог бы купить.">Алгоритм отсеивает тех, кому твой оффер изначально неинтересен. Так же, как соцсети не показывают рекламу всем подряд. Ты получаешь оценку от тех, кто действительно мог бы купить.</p>
-      </div>
-    </div>
-
-
-  </div>
-</section>
-
-<!-- ============ SECTION - MANIFEST ============ -->
-<section class="sec-quote" data-bg="light" id="manifesto-block">
-  <div class="grid-bg"></div>
-  <div class="container quote-wrap">
-    <div class="quote-panel reveal">
-      <p class="quote-tag" data-en="[ THEN → NOW ]" data-ru="[ БЫЛО → СТАЛО ]">[ БЫЛО → СТАЛО ]</p>
-      <p class="quote-headline">
-        <span class="quote-line">
-          <span data-en="Every failed creative" data-ru="Каждый провальный креатив стоил ">Каждый провальный креатив стоил </span><br class="break-en"><span data-en="used to cost " data-ru="">used to cost </span><strong>$500</strong><span data-en="." data-ru=".">.</span>
-        </span>
-        <span class="quote-line">
-          <span data-en="Now it costs " data-ru="Теперь стоит ">Теперь стоит </span><strong>$1.3</strong><span data-en="." data-ru=".">.</span>
-        </span>
-      </p>
-      <p class="quote-sign" data-en="- mimora.io" data-ru="- mimora.io">- mimora.io</p>
-    </div>
-  </div>
-</section>
-
-<!-- ============ SECTION 7 - PRICING ============ -->
-<section class="sec-gray" data-bg="light" id="pricing">
-  <div class="grid-bg"></div>
-  <div class="container">
-    <div class="price-head">
-      <div class="price-head-clip">
-        <h2 class="price-head-title" data-en="Do the math." data-ru="Посчитай сам.">Посчитай сам.</h2>
-      </div>
-    </div>
-    <div class="price-grid">
-      <div class="price-cards reveal" style="transition-delay:.08s">
-        <div class="price-card price-solo">
-          <span class="price-label">SOLO</span>
-          <div class="price-num">$50<span data-en="/ mo" data-ru="/ мес">/ мес</span></div>
-          <p class="price-desc" data-en="For individual specialists." data-ru="Для одиночных специалистов.">Для одиночных специалистов.</p>
-          <ul class="price-feats">
-            <li data-en="Base check limit" data-ru="Базовый лимит проверок">Базовый лимит проверок</li>
-            <li data-en="P2B Score + objection map" data-ru="P2B Score + карта возражений">P2B Score + карта возражений</li>
-            <li data-en="Improved version generation" data-ru="Генерация улучшенной версии">Генерация улучшенной версии</li>
-            <li data-en="Email support" data-ru="Поддержка по email">Поддержка по email</li>
-          </ul>
-        </div>
-        <div class="price-card price-bout">
-          <span class="price-badge" data-en="POPULAR" data-ru="ПОПУЛЯРНЫЙ">ПОПУЛЯРНЫЙ</span>
-          <span class="price-label">BOUTIQUE</span>
-          <div class="price-num">$70<span data-en="/ mo" data-ru="/ мес">/ мес</span></div>
-          <p class="price-desc" data-en="For small studios and teams." data-ru="Для бутик-команд и студий.">Для бутик-команд и студий.</p>
-          <ul class="price-feats">
-            <li data-en="Extended check limit" data-ru="Расширенный лимит проверок">Расширенный лимит проверок</li>
-            <li data-en="Extended analytics" data-ru="Расширенная аналитика">Расширенная аналитика</li>
-            <li data-en="Multi-user access" data-ru="Мультипользовательский доступ">Мультипользовательский доступ</li>
-            <li data-en="Priority support" data-ru="Приоритетная поддержка">Приоритетная поддержка</li>
-          </ul>
-          <div class="price-addon" data-en="Extra run: from $10 (100 tokens)" data-ru="Доп. прогон: от $10 (100 токенов)">Доп. прогон: от $10 (100 токенов)</div>
-        </div>
-        <div class="price-card price-agency">
-          <span class="price-label">AGENCY</span>
-          <div class="price-num">$120<span data-en="/ mo" data-ru="/ мес">/ мес</span></div>
-          <p class="price-desc" data-en="For agencies and in-house marketing teams." data-ru="Для агентств и in-house маркетинг-команд.">Для агентств и in-house маркетинг-команд.</p>
-          <ul class="price-feats">
-            <li data-en="Unlimited checks" data-ru="Безлимит проверок">Безлимит проверок</li>
-            <li data-en="API + bulk upload" data-ru="API + массовая загрузка">API + массовая загрузка</li>
-            <li data-en="Custom audience segments" data-ru="Кастомные сегменты аудитории">Кастомные сегменты аудитории</li>
-            <li data-en="Dedicated manager · SLA 4h" data-ru="Персональный менеджер · SLA 4ч">Персональный менеджер · SLA 4ч</li>
-          </ul>
-          <div class="price-addon" data-en="Extra run: from $8 (100 tokens)" data-ru="Доп. прогон: от $8 (100 токенов)">Доп. прогон: от $8 (100 токенов)</div>
-        </div>
-      </div>
-    </div>
-    <div class="price-foot reveal">
-      <span class="mono" data-en="3 MINUTES · $1.3 · FULL CHECK" data-ru="3 МИНУТЫ · $1.3 · ПОЛНАЯ ПРОВЕРКА">3 МИНУТЫ · $1.3 · ПОЛНАЯ ПРОВЕРКА</span>
-      <span class="sm" data-en="No hidden fees. Cancel anytime." data-ru="Нет скрытых платежей. Отменить в любой момент.">Нет скрытых платежей. Отменить в любой момент.</span>
-    </div>
-  </div>
-</section>
-
-<!-- ============ SECTION 9 - WAITLIST ============ -->
-<section class="sec-dark" data-bg="dark" id="waitlist">
-  <div class="container wait">
-      <h2 class="h-hero reveal">
-      <span class="l1" data-en="Be first to" data-ru="Тестируй умнее">Тестируй умнее</span>
-      <span class="l2" data-en="test smarter." data-ru="с первого запуска.">с первого запуска.</span>
-    </h2>
-    <p class="wait-sub reveal" data-en="Join early access - get first access and special terms." data-ru="Войди в список ранних пользователей - получи доступ первым и специальные условия.">Войди в список ранних пользователей - получи доступ первым и специальные условия.</p>
-    <form class="wait-form reveal" id="waitForm" onsubmit="event.preventDefault(); waitlistSubmit(this);">
-      <input type="email" required="" data-en-placeholder="Email" data-ru-placeholder="Email" placeholder="Email">
-      <button type="submit"><span data-en="Join Waitlist" data-ru="Войти в список">Войти в список</span> →</button>
-    </form>
-    <p class="wait-note reveal" data-en="No spam. Just a launch notification." data-ru="Никакого спама. Только уведомление о старте.">Никакого спама. Только уведомление о старте.</p>
-  </div>
-</section>
-
-<!-- ============ FOOTER ============ -->
-<footer class="foot" data-bg="dark">
-  <div class="foot-watermark"><div class="foot-watermark-text">mimora</div></div>
-  <div class="container foot-inner">
-    <div class="foot-top">
-      <div class="foot-brand">
-        <div class="logo">mimora</div>
-        <div class="tag">SYNTHETIC AUDIENCE INTELLIGENCE</div>
-      </div>
-      <div class="foot-nav">
+  <!-- ============ NAV ============ -->
+  <div class="nav-wrap">
+    <nav class="nav" id="nav">
+      <a href="index.html" class="nav-logo">mimora</a>
+      <div class="nav-links">
         <a href="index.html" data-en="HOME" data-ru="ГЛАВНАЯ">ГЛАВНАЯ</a>
         <a href="about.html" data-en="TEAM" data-ru="КОМАНДА">КОМАНДА</a>
         <a href="manifesto.html" data-en="MANIFESTO" data-ru="МАНИФЕСТ">МАНИФЕСТ</a>
+        <a href="pricing.html" data-en="PRICING" data-ru="ЦЕНЫ">ЦЕНЫ</a>
       </div>
-      <div class="foot-people">
-        <div class="foot-person">
-          <span class="name" data-en="Maydan Naimanov" data-ru="Майдан Найманов">Майдан Найманов</span>
-          <a href="https://t.me/MaydanMR" target="_blank" rel="noopener">→ @MaydanMR</a>
+      <div class="nav-right">
+        <div class="lang">
+          <button data-lang="en">EN</button>
+          <span class="sep">|</span>
+          <button data-lang="ru" class="active">RU</button>
         </div>
-        <div class="foot-person">
-          <span class="name" data-en="Diana Bushanskaya" data-ru="Диана Бушанская">Диана Бушанская</span>
-          <a href="https://t.me/chmahustle" target="_blank" rel="noopener">→ @chmahustle</a>
-        </div>
+        <a href="index.html#waitlist" class="btn-cta" data-en="Join Waitlist" data-ru="Войти в список">Войти в
+          список</a>
       </div>
-    </div>
-    <div class="foot-strip">MIMORA.IO · SYNTHETIC AUDIENCE INTELLIGENCE · BUILD 2025.04 · STATUS [ACTIVE]</div>
-    <div class="foot-bot">
-      <span>© 2026 mimora</span>
-      <a href="https://www.instagram.com/mimora.io?igsh=MW81bnBxNWN5bnN2dg%3D%3D&utm_source=qr" target="_blank" rel="noopener" class="foot-insta">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-          <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
-          <circle cx="12" cy="12" r="4"/>
-          <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+      <button class="hamburger" id="hamburger" aria-label="Меню">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </div>
+
+  <!-- ============ MOBILE MENU ============ -->
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-header">
+      <span class="mobile-menu-logo">mimora</span>
+      <button class="mobile-menu-close" id="mobileMenuClose" aria-label="Закрыть">
+        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"
+          stroke-linecap="round">
+          <line x1="1" y1="1" x2="11" y2="11" />
+          <line x1="11" y1="1" x2="1" y2="11" />
         </svg>
-        <span>@mimora.io</span>
-      </a>
+      </button>
+    </div>
+    <div class="mobile-menu-links">
+      <a href="index.html" data-en="Home" data-ru="Главная">Главная</a>
+      <a href="about.html" data-en="Team" data-ru="Команда">Команда</a>
+      <a href="manifesto.html" data-en="Manifesto" data-ru="Манифест">Манифест</a>
+      <a href="pricing.html" data-en="Pricing" data-ru="Цены">Цены</a>
+    </div>
+    <div class="mobile-menu-foot">
       <div class="lang">
         <button data-lang="en">EN</button>
         <span class="sep">|</span>
         <button data-lang="ru" class="active">RU</button>
       </div>
+      <a href="index.html#waitlist" class="btn-cta mobile-menu-cta" data-en="Join Waitlist"
+        data-ru="Войти в список">Войти в список</a>
     </div>
   </div>
-</footer>
+
+  <!-- ============ SECTION 1 - HERO ============ -->
+  <section class="hero sec-dark" data-bg="dark" id="hero">
+    <div class="hero-canvas-wrap">
+      <canvas class="hero-canvas" id="heroCanvas"></canvas>
+    </div>
+    <div class="container">
+      <div class="hero-inner reveal">
+        <span class="label hero-label" data-en="FIRST AI SIMULATION FOR TESTING DECISIONS"
+          data-ru="FIRST AI SIMULATION FOR TESTING DECISIONS">FIRST AI SIMULATION FOR TESTING DECISIONS</span>
+        <h1 class="h-hero hero-h">
+          <span data-en="Simulate " data-ru="Симулируй ">Симулируй </span><span class="highlight" data-en="reality"
+            data-ru="реальность">реальность</span><br>
+          <span data-en="before it happens." data-ru="до того как она случится.">до того как она случится.</span>
+        </h1>
+        <p class="hero-sub"
+          data-en="Run your decision through a synthetic world. See how they react, where they doubt, why they refuse - and get the version that works."
+          data-ru="Прогони своё решение через синтетический мир. Узнай как отреагируют, где усомнятся, почему откажутся - и получи версию которая сработает.">
+          Прогони своё решение через синтетический мир. Узнай как отреагируют, где усомнятся, почему откажутся - и
+          получи версию которая сработает.</p>
+        <div class="hero-ctas">
+          <a href="#waitlist" class="btn-primary"><span data-en="Join waitlist" data-ru="Войти в список">Войти в
+              список</span> →</a>
+          <a href="#use-cases" class="btn-ghost"><span data-en="What we simulate →" data-ru="Что симулируем →">Что
+              симулируем →</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 2 - PROBLEM ============ -->
+  <section class="prob-scroll-outer" data-bg="light" id="problem">
+    <div class="grid-bg"></div>
+    <div class="prob-sticky">
+      <div class="container prob-layout">
+
+        <div class="prob-left-col">
+          <h2 class="prob-heading" data-en="Reality punishes mistakes. Testing costs too much."
+            data-ru="Реальность наказывает за ошибки. Тестирование стоит слишком дорого.">Реальность наказывает за
+            ошибки. Тестирование стоит слишком дорого.</h2>
+          <div class="prob-steps-nav">
+            <button class="prob-dot active" data-step="0"></button>
+            <button class="prob-dot" data-step="1"></button>
+            <button class="prob-dot" data-step="2"></button>
+          </div>
+        </div>
+
+        <div class="prob-card-wrap">
+          <div class="prob-card" id="probCard">
+
+            <div class="prob-panel active" data-index="0">
+              <span class="prob-panel-num">01 / 03</span>
+              <div class="prob-panel-body">
+                <h3 class="prob-panel-title" data-en="Mistakes cost dearly" data-ru="Ошибка стоит дорого">Ошибка стоит
+                  дорого</h3>
+                <p class="prob-panel-text"
+                  data-en="Launched a feature - 20% of users left. Listed a product - nobody buys. Released a game mechanic - players complain. You learn the truth when it's already too late to change."
+                  data-ru="Запустил фичу - 20% юзеров ушли. Залил товар на маркетплейс - не покупают. Выкатил игровую механику - игроки жалуются. Ты узнаёшь правду когда уже поздно что-то менять.">
+                  Запустил фичу - 20% юзеров ушли. Залил товар на маркетплейс - не покупают. Выкатил игровую механику -
+                  игроки жалуются. Ты узнаёшь правду когда уже поздно что-то менять.</p>
+              </div>
+            </div>
+
+            <div class="prob-panel" data-index="1">
+              <span class="prob-panel-num">02 / 03</span>
+              <div class="prob-panel-body">
+                <h3 class="prob-panel-title" data-en="Testing takes weeks" data-ru="Тестирование занимает недели">
+                  Тестирование занимает недели</h3>
+                <p class="prob-panel-text"
+                  data-en="A/B tests need thousands of users and weeks of data. Focus groups lie - people don't know what they want until they see the buy button. One ChatGPT gives opinion, not behavior."
+                  data-ru="A/B тесты требуют тысячи пользователей и недель данных. Фокус-группы врут - люди не знают чего хотят пока не увидят кнопку оплаты. Один ChatGPT даёт мнение, а не поведение.">
+                  A/B тесты требуют тысячи пользователей и недель данных. Фокус-группы врут - люди не знают чего хотят
+                  пока не увидят кнопку оплаты. Один ChatGPT даёт мнение, а не поведение.</p>
+              </div>
+            </div>
+
+            <div class="prob-panel prob-panel--solution" data-index="2">
+              <span class="prob-panel-num prob-panel-num--lime">03 / 03</span>
+              <div class="prob-panel-body">
+                <h3 class="prob-panel-title prob-panel-title--lime" data-en="Solution - live the failure virtually"
+                  data-ru="Решение - прожить провал виртуально">Решение - прожить провал виртуально</h3>
+                <p class="prob-panel-text"
+                  data-en="We built an AI simulation where thousands of synthetic people experience your decision before it touches the real world. See how they react, where they doubt, why they refuse - in minutes, not weeks."
+                  data-ru="Мы построили AI-симуляцию где тысячи синтетических людей проживают твоё решение до того как оно коснётся реального мира. Видишь как отреагируют, где усомнятся, почему откажутся - за минуты, а не недели.">
+                  Мы построили AI-симуляцию где тысячи синтетических людей проживают твоё решение до того как оно
+                  коснётся реального мира. Видишь как отреагируют, где усомнятся, почему откажутся - за минуты, а не
+                  недели.</p>
+              </div>
+              <span class="prob-solution-tag">mimora</span>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 3 - SOLUTION ============ -->
+  <section class="how-it-works sec-dark" data-bg="dark" id="solution">
+    <div class="how-sticky">
+      <div class="how-scroll-hint" id="howScrollHint">
+        <span data-en="scroll" data-ru="скролл">скролл</span>
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"
+          stroke-linecap="round">
+          <line x1="8" y1="2" x2="8" y2="14" />
+          <polyline points="4,10 8,14 12,10" />
+        </svg>
+      </div>
+      <div class="how-grid">
+
+        <!-- LEFT: TEXT -->
+        <div class="how-text">
+          <div class="how-step active" data-step="1">
+            <span class="how-label" data-en="01 / Upload" data-ru="01 / Загрузка">01 / Загрузка</span>
+            <h3 class="how-title" data-en="Upload your creative, offer, or landing page"
+              data-ru="Загружаешь креатив, оффер или лендинг">Загружаешь креатив, оффер или лендинг</h3>
+            <p class="how-body"
+              data-en="Image, text, or a link to your site - whatever you've got. No integrations. The test starts in under a minute."
+              data-ru="Картинка, текст, ссылка на сайт - что угодно. Никаких интеграций. Тест запускается за минуту.">
+              Картинка, текст, ссылка на сайт - что угодно. Никаких интеграций. Тест запускается за минуту.</p>
+          </div>
+          <div class="how-step" data-step="2">
+            <span class="how-label" data-en="02 / Audience" data-ru="02 / Аудитория">02 / Аудитория</span>
+            <h3 class="how-title" data-en="Pick your audience" data-ru="Выбираешь, кому показать">Выбираешь, кому
+              показать</h3>
+            <p class="how-body"
+              data-en="Geo, gender, age, interests, income. The algorithm assembles an AI audience from people who could actually buy."
+              data-ru="Гео, пол, возраст, интересы, доход. Алгоритм соберёт AI-аудиторию из тех, кому твой оффер реально мог бы зайти.">
+              Гео, пол, возраст, интересы, доход. Алгоритм соберёт AI-аудиторию из тех, кому твой оффер реально мог бы
+              зайти.</p>
+          </div>
+          <div class="how-step" data-step="3">
+            <span class="how-label" data-en="03 / Analytics" data-ru="03 / Аналитика">03 / Аналитика</span>
+            <h3 class="how-title" data-en="See why they won't buy" data-ru="Видишь почему не купят">Видишь почему не
+              купят</h3>
+            <p class="how-body"
+              data-en="P2B Score, objection map, reasons for rejection. Agents literally comment on your creative - like a live focus group in the comments."
+              data-ru="P2B Score, карта возражений, причины отказа. Агенты буквально комментируют твой креатив - как живая фокус-группа в комментах.">
+              P2B Score, карта возражений, причины отказа. Агенты буквально комментируют твой креатив - как живая
+              фокус-группа в комментах.</p>
+          </div>
+          <div class="how-step" data-step="4">
+            <span class="how-label" data-en="04 / Improvement" data-ru="04 / Улучшение">04 / Улучшение</span>
+            <h3 class="how-title" data-en="Get the version they'll buy" data-ru="Получаешь версию которая купят">
+              Получаешь версию которая купят</h3>
+            <p class="how-body"
+              data-en="The platform generates a fixed version addressing the found objections. Re-run the test. Only then - go live."
+              data-ru="Платформа сразу генерирует исправленный креатив с учётом найденных возражений. Прогоняешь повторно. И только потом - в трафик.">
+              Платформа сразу генерирует исправленный креатив с учётом найденных возражений. Прогоняешь повторно. И
+              только потом - в трафик.</p>
+          </div>
+        </div>
+
+        <!-- RIGHT: LAYERED SCENE -->
+        <div class="how-scene">
+
+          <!-- STEP 1: Dropzone -->
+          <div class="scene-group active" data-step="1">
+            <div class="card card-main card-dropzone">
+              <div class="card-header" data-en="UPLOAD" data-ru="UPLOAD">UPLOAD</div>
+              <div class="card-body">
+                <svg class="upload-icon" width="36" height="36" stroke="#C0CC72" stroke-width="1.5" fill="none"
+                  viewBox="0 0 24 24">
+                  <path d="M12 4v12m0-12l-4 4m4-4l4 4M4 20h16" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+                <div class="dropzone-text" data-en="Drop your creative here" data-ru="Перетащи креатив сюда">Перетащи
+                  креатив сюда</div>
+                <div class="dropzone-progress">
+                  <span>creative_v3.jpg · 2.4 MB</span>
+                  <span class="check">✓</span>
+                </div>
+              </div>
+            </div>
+            <div class="card card-aux card-tag" style="--x:-300px; --y:-160px; --rot:-3deg;">PNG · JPG · MP4 · LINK
+            </div>
+            <div class="card card-aux card-meta" style="--x:300px; --y:-170px; --rot:2deg;">1280×720 · 2.4 MB</div>
+            <div class="card card-aux card-timer" style="--x:290px; --y:160px; --rot:-2deg;">
+              <span class="dot-live"></span>
+              <span data-en="Analysis running · 00:23" data-ru="Анализ запущен · 00:23">Анализ запущен · 00:23</span>
+            </div>
+          </div>
+
+          <!-- STEP 2: Audience -->
+          <div class="scene-group" data-step="2">
+            <div class="card card-main card-screenshot">
+              <div class="card-header" data-en="AUDIENCE MAP" data-ru="AUDIENCE MAP">AUDIENCE MAP</div>
+              <div class="card-body card-img">
+                <img src="assets/images/audience-map.jpg" alt="Audience map">
+              </div>
+            </div>
+            <div class="card card-aux card-filter" style="--x:-310px; --y:-140px; --rot:-2deg;"
+              data-en="Geo: Kazakhstan + CIS" data-ru="Гео: Казахстан + СНГ">Гео: Казахстан + СНГ</div>
+            <div class="card card-aux card-filter" style="--x:-320px; --y:40px; --rot:3deg;" data-en="Age: 25–45"
+              data-ru="Возраст: 25–45">Возраст: 25–45</div>
+            <div class="card card-aux card-filter" style="--x:305px; --y:-150px; --rot:2deg;"
+              data-en="Interests: marketing, business" data-ru="Интересы: маркетинг, бизнес">Интересы: маркетинг, бизнес
+            </div>
+            <div class="card card-aux card-metric" style="--x:295px; --y:150px; --rot:-3deg;">
+              <strong>412</strong>
+              <span data-en="relevant agents" data-ru="релевантных агентов">релевантных агентов</span>
+            </div>
+          </div>
+
+          <!-- STEP 3: Reactions -->
+          <div class="scene-group" data-step="3">
+            <div class="card card-main card-screenshot">
+              <div class="card-header" data-en="REACTIONS" data-ru="REACTIONS">REACTIONS</div>
+              <div class="card-body card-img">
+                <img src="assets/images/agent-reactions.jpg" alt="Agent reactions">
+              </div>
+            </div>
+            <div class="card card-aux card-score" style="--x:-310px; --y:-140px; --rot:-2deg;">
+              <span class="score-label">P2B SCORE</span>
+              <strong>23%</strong>
+            </div>
+            <div class="card card-aux card-quote" style="--x:-300px; --y:110px; --rot:2deg;">
+              <span class="quote-mark">"</span><span data-en="Too expensive for the guarantees"
+                data-ru="Слишком дорого для гарантий">Слишком дорого для гарантий</span>
+            </div>
+            <div class="card card-aux card-quote" style="--x:305px; --y:-160px; --rot:3deg;">
+              <span class="quote-mark">"</span><span data-en="Not clear what I'm getting"
+                data-ru="Не понятно что я получу">Не понятно что я получу</span>
+            </div>
+            <div class="card card-aux card-meta" style="--x:295px; --y:155px; --rot:-2deg;"
+              data-en="312 agents · 78 objections" data-ru="312 агентов · 78 возражений">312 агентов · 78 возражений
+            </div>
+          </div>
+
+          <!-- STEP 4: Regenerated -->
+          <div class="scene-group" data-step="4">
+            <div class="card card-main card-screenshot">
+              <div class="card-header" data-en="REGENERATED" data-ru="REGENERATED">REGENERATED</div>
+              <div class="card-body card-img">
+                <img src="assets/images/regenerated-creative.jpg" alt="Regenerated creative">
+              </div>
+            </div>
+            <div class="card card-aux card-growth" style="--x:-310px; --y:-150px; --rot:-3deg;">
+              <span class="growth-label">P2B SCORE</span>
+              <span class="growth-row"><strong>23%</strong> <span class="arrow">→</span> <strong
+                  class="hi">67%</strong></span>
+            </div>
+            <div class="card card-aux card-ba" style="--x:-300px; --y:110px; --rot:2deg;">
+              <span class="ba-before" data-en="&quot;Best AI tool&quot;"
+                data-ru="&quot;Лучший AI инструмент&quot;">"Лучший AI инструмент"</span>
+              <span class="ba-arrow">↓</span>
+              <span class="ba-after" data-en="&quot;Save $500 in 3 minutes&quot;"
+                data-ru="&quot;Сэкономь $500 за 3 минуты&quot;">"Сэкономь $500 за 3 минуты"</span>
+            </div>
+            <div class="card card-aux card-version" style="--x:295px; --y:150px; --rot:-2deg;">
+              <span class="dot-live"></span>
+              <span data-en="Version 2 ready · re-test ↻" data-ru="Версия 2 готова · повторный тест ↻">Версия 2 готова ·
+                повторный тест ↻</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- PROGRESS -->
+        <div class="how-progress">
+          <span class="dot active"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============ SECTION - HELIXA GREEN ============ -->
+  <section class="helixa-green" id="helixa-green-block">
+    <div class="grid-bg"></div>
+    <div class="container quote-wrap">
+      <div class="helixa-green-inner reveal">
+
+        <span class="helixa-green-label" data-ru="ПОД КАПОТОМ" data-en="UNDER THE HOOD">
+          ПОД КАПОТОМ
+        </span>
+
+        <h2 class="helixa-green-title" data-ru="Не ChatGPT. Helixa." data-en="Not ChatGPT. Helixa.">
+          Не ChatGPT. Helixa.
+        </h2>
+
+        <p class="helixa-green-desc"
+          data-ru="Закрытое ядро mimora. Каждый агент помнит биографию, видит реакции других и принимает решение в 13 этапов - как живой человек, а не языковая модель."
+          data-en="mimora's closed-source engine. Every agent remembers their biography, sees others' reactions, and makes decisions in 13 stages - like a real person, not a language model.">
+          Закрытое ядро mimora. Каждый агент помнит биографию, видит реакции
+          других и принимает решение в 13 этапов - как живой человек,
+          а не языковая модель.
+        </p>
+
+        <div class="helixa-green-pills">
+          <span data-ru="Долгосрочная память" data-en="Long-term memory">Долгосрочная память</span>
+          <span data-ru="Социальный контекст" data-en="Social context">Социальный контекст</span>
+          <span data-ru="13-этапное решение" data-en="13-stage decision">13-этапное решение</span>
+          <span data-ru="Не API-wrapper" data-en="Not an API wrapper">Не API-wrapper</span>
+        </div>
+
+        <p class="industries-line" data-ru="Маркетинг · E-commerce · Games · HR · Product · Email & CRM"
+          data-en="Marketing · E-commerce · Games · HR · Product · Email & CRM">
+          Маркетинг · E-commerce · Games · HR · Product · Email & CRM
+        </p>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 4 - TECHNOLOGY ============ -->
+  <section class="sec-gray" data-bg="light" id="tech">
+    <div class="grid-bg"></div>
+    <div class="container">
+      <div class="tech-head">
+        <div class="tech-head-clip">
+          <h2 class="tech-head-title h-sec" data-en="One AI gives opinions. mimora gives behavior."
+            data-ru="Один AI даёт мнение. mimora - поведение.">Один AI даёт мнение. mimora - поведение.</h2>
+        </div>
+      </div>
+
+      <div class="tech-row">
+        <div class="tech-block reveal">
+          <h3 class="tech-block-t" data-en="Each agent has a real backstory"
+            data-ru="У каждого агента - своя биография">У каждого агента - своя биография</h3>
+          <p class="tech-block-b"
+            data-en="Not identical AI clones. Each agent has their own demographics, history, attitude toward money, and biases. Their reactions to your creative differ - like real people."
+            data-ru="Не одинаковые AI-клоны. У каждого агента своя демография, опыт, отношение к деньгам и предубеждения. Поэтому реакции на твой креатив разные - как у настоящих людей.">
+            Не одинаковые AI-клоны. У каждого агента своя демография, опыт, отношение к деньгам и предубеждения. Поэтому
+            реакции на твой креатив разные - как у настоящих людей.</p>
+        </div>
+        <div class="tech-block reveal" style="transition-delay:.1s">
+          <h3 class="tech-block-t" data-en="Agents see each other" data-ru="Агенты видят друг друга">Агенты видят друг
+            друга</h3>
+          <p class="tech-block-b"
+            data-en="In a real feed, one like changes the mind of ten others. Our agents also see each other's reactions - they behave like a crowd, not isolated respondents."
+            data-ru="В реальной ленте один лайк меняет мнение десяти. Наши агенты тоже видят, кто что написал - и реагируют как толпа, а не как изолированные респонденты.">
+            В реальной ленте один лайк меняет мнение десяти. Наши агенты тоже видят, кто что написал - и реагируют как
+            толпа, а не как изолированные респонденты.</p>
+        </div>
+        <div class="tech-block reveal" style="transition-delay:.2s">
+          <h3 class="tech-block-t" data-en="Only relevant agents pass the filter"
+            data-ru="К тесту допускаются только релевантные">К тесту допускаются только релевантные</h3>
+          <p class="tech-block-b"
+            data-en="The algorithm filters out agents who wouldn't care about your offer in the first place - just like social platforms don't show ads to everyone. You get reactions from those who could actually buy."
+            data-ru="Алгоритм отсеивает тех, кому твой оффер изначально неинтересен. Так же, как соцсети не показывают рекламу всем подряд. Ты получаешь оценку от тех, кто действительно мог бы купить.">
+            Алгоритм отсеивает тех, кому твой оффер изначально неинтересен. Так же, как соцсети не показывают рекламу
+            всем подряд. Ты получаешь оценку от тех, кто действительно мог бы купить.</p>
+        </div>
+      </div>
+
+
+    </div>
+  </section>
+
+
+
+  <!-- ============ SECTION 9 - WAITLIST ============ -->
+  <section class="sec-dark" data-bg="dark" id="waitlist">
+    <div class="container wait">
+      <h2 class="h-hero reveal">
+        <span class="l1" data-en="Be first to" data-ru="Тестируй умнее">Тестируй умнее</span>
+        <span class="l2" data-en="test smarter." data-ru="с первого запуска.">с первого запуска.</span>
+      </h2>
+      <p class="wait-sub reveal" data-en="Join early access - get first access and special terms."
+        data-ru="Войди в список ранних пользователей - получи доступ первым и специальные условия.">Войди в список
+        ранних пользователей - получи доступ первым и специальные условия.</p>
+      <form class="wait-form reveal" id="waitForm" onsubmit="event.preventDefault(); waitlistSubmit(this);">
+        <input type="email" required="" data-en-placeholder="Email" data-ru-placeholder="Email" placeholder="Email">
+        <button type="submit"><span data-en="Join Waitlist" data-ru="Войти в список">Войти в список</span> →</button>
+      </form>
+      <p class="wait-note reveal" data-en="No spam. Just a launch notification."
+        data-ru="Никакого спама. Только уведомление о старте.">Никакого спама. Только уведомление о старте.</p>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="foot" data-bg="dark">
+    <div class="foot-watermark">
+      <div class="foot-watermark-text">mimora</div>
+    </div>
+    <div class="container foot-inner">
+      <div class="foot-top">
+        <div class="foot-brand">
+          <div class="logo">mimora</div>
+          <div class="tag">SYNTHETIC AUDIENCE INTELLIGENCE</div>
+        </div>
+        <div class="foot-nav">
+          <a href="index.html" data-en="HOME" data-ru="ГЛАВНАЯ">ГЛАВНАЯ</a>
+          <a href="about.html" data-en="TEAM" data-ru="КОМАНДА">КОМАНДА</a>
+          <a href="manifesto.html" data-en="MANIFESTO" data-ru="МАНИФЕСТ">МАНИФЕСТ</a>
+          <a href="pricing.html" data-en="PRICING" data-ru="ЦЕНЫ">ЦЕНЫ</a>
+        </div>
+        <div class="foot-people">
+          <div class="foot-person">
+            <span class="name" data-en="Maydan Naimanov" data-ru="Майдан Найманов">Майдан Найманов</span>
+            <a href="https://t.me/MaydanMR" target="_blank" rel="noopener">→ @MaydanMR</a>
+          </div>
+          <div class="foot-person">
+            <span class="name" data-en="Diana Bushanskaya" data-ru="Диана Бушанская">Диана Бушанская</span>
+            <a href="https://t.me/chmahustle" target="_blank" rel="noopener">→ @chmahustle</a>
+          </div>
+        </div>
+      </div>
+      <div class="foot-strip">MIMORA.IO · SYNTHETIC AUDIENCE INTELLIGENCE · BUILD 2025.04 · STATUS [ACTIVE]</div>
+      <div class="foot-bot">
+        <span>© 2026 mimora</span>
+        <a href="https://www.instagram.com/mimora.io?igsh=MW81bnBxNWN5bnN2dg%3D%3D&utm_source=qr" target="_blank"
+          rel="noopener" class="foot-insta">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+            <circle cx="12" cy="12" r="4" />
+            <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+          </svg>
+          <span>@mimora.io</span>
+        </a>
+        <div class="lang">
+          <button data-lang="en">EN</button>
+          <span class="sep">|</span>
+          <button data-lang="ru" class="active">RU</button>
+        </div>
+      </div>
+    </div>
+  </footer>
   <script src="js/lenis.min.js"></script>
   <script src="js/gsap.min.js"></script>
   <script src="js/ScrollTrigger.min.js"></script>
   <script src="js/main.js"></script>
 </body>
+
 </html>
