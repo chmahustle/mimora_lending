@@ -76,16 +76,20 @@
   <!-- ============ SECTION 1 - HERO ============ -->
   <section class="hero sec-dark" data-bg="dark" id="hero">
     <div class="hero-canvas-wrap">
-      <canvas class="hero-canvas" id="heroCanvas"></canvas>
+      <video class="hero-video" autoplay muted loop playsinline aria-hidden="true">
+        <source src="assets/images/0529.mp4" type="video/mp4">
+      </video>
     </div>
     <div class="container">
       <div class="hero-inner reveal">
         <span class="label hero-label" data-en="FIRST AI SIMULATION FOR TESTING DECISIONS"
           data-ru="FIRST AI SIMULATION FOR TESTING DECISIONS">FIRST AI SIMULATION FOR TESTING DECISIONS</span>
         <h1 class="h-hero hero-h">
-          <span data-en="Simulate " data-ru="Симулируй ">Симулируй </span><span class="highlight" data-en="reality"
-            data-ru="реальность">реальность</span><br>
-          <span data-en="before it happens." data-ru="до того как она случится.">до того как она случится.</span>
+          <span class="hero-h-line">
+            <span data-en="Simulate " data-ru="Симулируй ">Симулируй </span><span class="highlight" data-en="reality"
+              data-ru="реальность">реальность</span>
+          </span>
+          <span class="hero-h-line" data-en="before it happens." data-ru="до того как она случится.">до того как она случится.</span>
         </h1>
         <p class="hero-sub"
           data-en="Run your decision through a synthetic world. See how they react, where they doubt, why they refuse - and get the version that works."
@@ -94,9 +98,9 @@
           получи версию которая сработает.</p>
         <div class="hero-ctas">
           <a href="#waitlist" class="btn-primary"><span data-en="Join waitlist" data-ru="Войти в список">Войти в
-              список</span> →</a>
-          <a href="#use-cases" class="btn-ghost"><span data-en="What we simulate →" data-ru="Что симулируем →">Что
-              симулируем →</span></a>
+              список</span></a>
+          <a href="#use-cases" class="btn-ghost"><span data-en="What we simulate" data-ru="Что симулируем">Что
+              симулируем</span></a>
         </div>
       </div>
     </div>
@@ -440,7 +444,7 @@
         ранних пользователей - получи доступ первым и специальные условия.</p>
       <form class="wait-form reveal" id="waitForm" onsubmit="event.preventDefault(); waitlistSubmit(this);">
         <input type="email" required="" data-en-placeholder="Email" data-ru-placeholder="Email" placeholder="Email">
-        <button type="submit"><span data-en="Join Waitlist" data-ru="Войти в список">Войти в список</span> →</button>
+        <button type="submit"><span data-en="Join Waitlist" data-ru="Войти в список">Войти в список</span></button>
       </form>
       <p class="wait-note reveal" data-en="No spam. Just a launch notification."
         data-ru="Никакого спама. Только уведомление о старте.">Никакого спама. Только уведомление о старте.</p>
