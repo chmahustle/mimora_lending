@@ -1901,7 +1901,8 @@ section {
 }
 
 /* Green manifesto block sits on top of the pricing section */
-#manifesto-block {
+#manifesto-block,
+#helixa-green-block {
   position: relative;
   z-index: 20;
   overflow: visible;
@@ -1965,6 +1966,113 @@ section {
   font-size: 13px;
   color: rgba(0, 0, 0, .4);
   letter-spacing: .05em;
+}
+
+.quote-desc {
+  margin: 0 0 40px;
+  max-width: 56ch;
+  font-family: var(--m);
+  font-size: clamp(15px, 1.2vw, 18px);
+  line-height: 1.65;
+  color: rgba(15, 15, 15, .65);
+}
+
+.quote-panel .helixa-green-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 28px;
+}
+
+.quote-panel .helixa-green-pills span {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  padding: 8px 14px;
+  border: 1px solid rgba(0, 0, 0, .22);
+  color: rgba(15, 15, 15, .75);
+}
+
+/* Helixa block — typography + scroll reveal */
+#helixa-green-block .quote-panel {
+  overflow: hidden;
+  will-change: transform, opacity;
+  min-height: auto;
+  padding: clamp(56px, 7vw, 88px) clamp(32px, 6vw, 72px);
+  align-items: center;
+  text-align: center;
+}
+
+#helixa-green-block .quote-tag {
+  margin-bottom: 24px;
+  color: rgba(0, 0, 0, .42);
+}
+
+#helixa-green-block .quote-headline {
+  margin: 0 0 24px;
+  max-width: 11ch;
+  font-size: clamp(32px, 4.5vw, 60px);
+  line-height: 1.08;
+  letter-spacing: -.03em;
+}
+
+#helixa-green-block .quote-line + .quote-line {
+  margin-top: .06em;
+}
+
+#helixa-green-block .quote-line-accent {
+  font-weight: 600;
+  color: #0a0a0a;
+}
+
+#helixa-green-block .quote-desc {
+  margin: 0 auto 24px;
+  max-width: 42ch;
+  font-size: clamp(15px, 1.15vw, 18px);
+  line-height: 1.65;
+  color: rgba(15, 15, 15, .72);
+  padding-left: 0;
+  border-left: none;
+}
+
+#helixa-green-block .helixa-green-pills {
+  gap: 8px;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+
+#helixa-green-block .helixa-green-pills span {
+  background: rgba(255, 255, 255, .28);
+  border: 1px solid rgba(0, 0, 0, .1);
+  color: rgba(15, 15, 15, .82);
+  padding: 8px 14px;
+}
+
+#helixa-green-block .quote-sign {
+  font-size: 11px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, .38);
+}
+
+#helixa-green-block .helixa-reveal {
+  will-change: transform, opacity;
+}
+
+@media (max-width: 768px) {
+  #helixa-green-block .quote-panel {
+    padding: 48px 24px;
+  }
+
+  #helixa-green-block .quote-headline {
+    max-width: none;
+    font-size: clamp(28px, 8vw, 40px);
+  }
+
+  #helixa-green-block .quote-desc {
+    max-width: none;
+  }
 }
 
 /* ============ COMPARISON ============ */

@@ -287,6 +287,41 @@ function waitlistSubmit(form) {
   });
 })();
 
+/* =========== HELIXA PANEL — SCROLL REVEAL =========== */
+(function () {
+  const panel = document.getElementById('helixaPanel');
+  if (!panel) return;
+
+  const items = panel.querySelectorAll('.helixa-reveal');
+
+  if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') return;
+
+  gsap.set(panel, { opacity: 0, y: 56, scale: 0.97 });
+  gsap.set(items, { opacity: 0, y: 28 });
+
+  gsap.timeline({
+    scrollTrigger: {
+      trigger: panel,
+      start: 'top 88%',
+      once: true,
+    },
+  })
+    .to(panel, {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      duration: 0.95,
+      ease: 'power3.out',
+    })
+    .to(items, {
+      opacity: 1,
+      y: 0,
+      duration: 0.65,
+      stagger: 0.09,
+      ease: 'power2.out',
+    }, '-=0.55');
+})();
+
 /* =========== MOBILE MENU =========== */
 (function () {
   const btn = document.getElementById('hamburger');
